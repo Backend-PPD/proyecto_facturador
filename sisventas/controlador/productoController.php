@@ -1,67 +1,46 @@
 <?php
+include_once $_SERVER['DOCUMENT_ROOT']."/sisventas/modelo/producto.php";
 
-include $_SERVER['DOCUMENT_ROOT']."/sisventas/modelo/producto.php";
-
-class ProductoController{
+class ProductoController {
 
     public function obtener_listado(){
-
-        $listado = new Producto();
-        $res = $listado->listado();
-        return $res;
-
+        $producto = new Producto();
+        return $producto->listado();
     }
 
-    public function inserta_producto($nom, $und,$stock, $precio, $costo){
-        $oprodu = new Producto();
-        $oprodu->setNomprodu($nom);
-        $oprodu->setUnimed($und);
-        $oprodu->setStock($stock);
-        $oprodu->setPreuni($precio);
-        $oprodu->setCosuni($costo);
-
-        $res =$oprodu->create();
-        if ($res){
-            return true;
-        }
-        else    
-            return false;
-
+    public function buscar_producto($id){
+        $producto = new Producto();
+        return $producto->buscar($id);
     }
 
-    public function busca_producto($id){
-        $oprodu = new Producto();
-        $res = $oprodu->buscar($id);
-        return $res;
+    public function inserta_producto($nom, $und, $stock, $precio, $costo, $idcat, $idprov){
+        $producto = new Producto();
+        $producto->setNomprodu($nom);
+        $producto->setUnimed($und);
+        $producto->setStock($stock);
+        $producto->setPreuni($precio);
+        $producto->setCosuni($costo);
+        $producto->setIdcategoria($idcat);
+        $producto->setIdproveedor($idprov);
+        return $producto->create();
     }
 
-    public function actualiza_producto($id,$nom, $und,$stock, $precio, $costo){
-        $oprodu = new Producto();
-        $oprodu->setIdproducto($id);
-        $oprodu->setNomprodu($nom);
-        $oprodu->setUnimed($und);
-        $oprodu->setStock($stock);
-        $oprodu->setPreuni($precio);
-        $oprodu->setCosuni($costo);
-
-        $res =$oprodu->update();
-        if ($res){
-            return true;
-        }
-        else    
-            return false;
-
-
+    public function actualizar_producto($id, $nom, $und, $stock, $precio, $costo, $idcat, $idprov){
+        $producto = new Producto();
+        $producto->setIdproducto($id);
+        $producto->setNomprodu($nom);
+        $producto->setUnimed($und);
+        $producto->setStock($stock);
+        $producto->setPreuni($precio);
+        $producto->setCosuni($costo);
+        $producto->setIdcategoria($idcat);
+        $producto->setIdproveedor($idprov);
+        return $producto->update();
     }
 
-    public function elimina_producto($id){
-        $oprodu = new Producto();
-        $res = $oprodu->delete($id);
-        if ($res)
-            echo "Registro Eliminado satisfactoriamente..";
-        else        
-            echo "Problemas al eliminar el Registro";
+    public function eliminar_producto($id){
+        $producto = new Producto();
+        $producto->setIdproducto($id);
+        return $producto->delete();
     }
-
-
 }

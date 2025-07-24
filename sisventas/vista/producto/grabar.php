@@ -7,9 +7,11 @@ $und = strtoupper($_POST["txtunimed"]);
 $stk = $_POST["txtstock"];
 $pre = $_POST["txtpreuni"];
 $cos = $_POST["txtcosuni"];
+$idcat = isset($_POST["idcategoria"]) ? $_POST["idcategoria"] : null;
+$idprov = isset($_POST["idproveedor"]) ? $_POST["idproveedor"] : null;
 
 $producto = new ProductoController();
-$res = $producto->inserta_producto($nom,$und,$stk,$pre,$cos);
+$res = $producto->inserta_producto($nom,$und,$stk,$pre,$cos,$idcat,$idprov);
 if ($res) {
     echo "Producto agregado exitosamente";
     header("Location: http://localhost/sisventas/vista/producto/listado.php");

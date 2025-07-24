@@ -2,6 +2,7 @@
 
 include 'config.php';
 
+if (!class_exists('DBConection')) {
 class DBConection{
 
 public function conectar(){
@@ -16,6 +17,7 @@ public function conectar(){
         // Manejo de errores
         echo "Error en la conexión: " . $e->getMessage();
     }
+}
 }
 }
 ?>
