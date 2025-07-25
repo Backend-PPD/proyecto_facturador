@@ -1,7 +1,7 @@
 INSTITUTO DE EDUCACIÓN SUPERIOR TECNOLÓGICO PÚBLICO
 “PEDRO P. DÍAZ”
 
-<img width="331" height="318" alt="image" src="https://github.com/user-attachments/assets/deee4004-6c8b-431f-b0a1-7b7cf0821d28" />
+                                                                    <img width="331" height="318" alt="image" src="https://github.com/user-attachments/assets/deee4004-6c8b-431f-b0a1-7b7cf0821d28" />
 
 
 
