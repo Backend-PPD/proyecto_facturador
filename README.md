@@ -62,5 +62,16 @@ El sistema SISVENTAS se ha desarrollado siguiendo una arquitectura **MVC (Modelo
 ## Diagrama de flujo de conexión de base de datos
 <img width="813" height="534" alt="image" src="https://github.com/user-attachments/assets/7fe37bc8-bada-44f6-86f3-cadd6d7b6693" />
 
+## WEB HOSTING DEL PROYECTO.
+CREADO CON INFINITYFREE.COM
 
+<img width="1128" height="466" alt="image" src="https://github.com/user-attachments/assets/fe479225-fb55-451e-b93b-d4254c79021b" />
 
+- **PROGRAMA IMPORTADO
+<img width="1360" height="587" alt="image" src="https://github.com/user-attachments/assets/946e92bc-309f-470f-aac2-e679aaf01c9c" />
+
+- **PAGINA WEB SUBIDO
+
+<img width="1160" height="671" alt="image" src="https://github.com/user-attachments/assets/bd5a1493-c329-4089-adf2-3caa24b8f319" />
+
+- **link_: https://proyectofacdsi.wuaze.com/?i=1
